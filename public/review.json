@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Winson Henry",
+        "review": "Cooler Fan",
+        "img": "https://i.ibb.co/whRXZbY/people1.png",
+        "location": "California",
+        "description": "Genuine and best products. Nice Customer Support."
+    },
+    {
+        "name": "Nasuma Khondoker",
+        "review": "HardDisk",
+        "img": "https://i.ibb.co/rdzYHrk/people2.png",
+        "location": "Dhaka",
+        "description": "Genuine and best products. Nice Customer Support."
+    },
+    {
+        "name": "Asifa Sheikh",
+        "review": "Laptop Case",
+        "img": "https://i.ibb.co/cy4mnV4/people3.png",
+        "location": "Canada",
+        "description": "Genuine and best products. Nice Customer Support."
+    }
+]
