@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Laptop Case",
+        "img": "https://i.ibb.co/G2jQdzS/cooler-Fan.jpg",
+        "description": "Wooden Sofa Set for your living space. Wonderful in color and shape. Affordable for anyone.",
+        "minOrderQuantity": 100,               
+        "availableQuantity" : 200,
+        "price": "300"
+    },
+    {
+        "name": "Laptop Processor",
+        "img": "https://i.ibb.co/Vx10jh6/Wooden-Furniture.png",
+        "description": "Wooden Sofa Set for your living space. Wonderful in color and shape. Affordable for anyone.",
+        "minOrderQuantity": 100,               
+        "availableQuantity" : 200,
+        "price": "300"
+    },
+    {
+        "name": "Cooler Fan",
+        "img": "https://i.ibb.co/G2jQdzS/cooler-Fan.jpg",
+        "description": "Wooden Sofa Set for your living space. Wonderful in color and shape. Affordable for anyone.",
+        "minOrderQuantity": 100,               
+        "availableQuantity" : 200,
+        "price": "300"
+    },
+    {
+        "name": "HardDisk",
+        "img": "https://i.ibb.co/Vx10jh6/Wooden-Furniture.png",
+        "description": "Wooden Sofa Set for your living space. Wonderful in color and shape. Affordable for anyone.",
+        "minOrderQuantity": 100,               
+        "availableQuantity" : 200,
+        "price": "300"
+    },
+    {
+        "name": "Solid State Disk",
+        "img": "https://i.ibb.co/Vx10jh6/Wooden-Furniture.png",
+        "description": "Wooden Sofa Set for your living space. Wonderful in color and shape. Affordable for anyone.",
+        "minOrderQuantity": 100,               
+        "availableQuantity" : 200,
+        "price": "300"
+    },
+    {
+        "name": "RAM",
+        "img": "https://i.ibb.co/Vx10jh6/Wooden-Furniture.png",
+        "description": "Wooden Sofa Set for your living space. Wonderful in color and shape. Affordable for anyone.",
+        "minOrderQuantity": 100,               
+        "availableQuantity" : 200,
+        "price": "300"
+    } 
+]
