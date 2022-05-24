@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import useTools from '../../Hooks/useTools';
 import Purchase from '../Purchase/Purchase';
 import Tool from './Tool';
 
 const Tools = () => {
-    const [tools, setTools] = useState([]);
-
-    useEffect(()=>{
-        fetch('fakedata.json')
-        .then(res => res.json())
-        .then(data => setTools(data))
-    },[])
+   const [tools] = useTools();
 
     return (
         <div >

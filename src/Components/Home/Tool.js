@@ -3,11 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import Purchase from '../Purchase/Purchase';
 
 const Tool = ({ tool }) => {
-    const { name, img, description, minOrderQuantity, availableQuantity, price } = tool;
+    const { _id, name, img, description, minOrderQuantity, availableQuantity, price } = tool;
     const navigate = useNavigate();
 
-    const handleOrder = () =>{
-        navigate('/purchase');
+    const handleOrder = (id) =>{
+        navigate(`/tools/${id}`);
     }
 
     return (
@@ -23,7 +23,7 @@ const Tool = ({ tool }) => {
                     <p><b>Minimum Order Quantity:</b> {minOrderQuantity}</p>
                     <p><b>Available Quantity:</b> {availableQuantity}</p>
                     
-                    <button onClick={handleOrder} class="btn btn-primary mt-3">Order Now</button>
+                    <button onClick={() => handleOrder(_id)} class="btn btn-primary mt-3">Order Now</button>
                 </div>
             </div>
         </div>

@@ -5,7 +5,7 @@ const BusinessSummaries = () => {
     const [summaries, setSummaries] = useState([]);
 
     useEffect(()=>{
-        fetch('summary.json')
+        fetch('http://localhost:5000/summary')
         .then(res => res.json())
         .then(data => setSummaries(data))
     },[])
