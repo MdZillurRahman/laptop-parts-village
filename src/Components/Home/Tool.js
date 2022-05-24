@@ -1,7 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import Purchase from '../Purchase/Purchase';
 
 const Tool = ({ tool }) => {
     const { name, img, description, minOrderQuantity, availableQuantity, price } = tool;
+    const navigate = useNavigate();
+
+    const handleOrder = () =>{
+        navigate('/purchase');
+    }
 
     return (
         <div class="hero bg-gray-500 rounded-lg">
@@ -16,7 +23,7 @@ const Tool = ({ tool }) => {
                     <p><b>Minimum Order Quantity:</b> {minOrderQuantity}</p>
                     <p><b>Available Quantity:</b> {availableQuantity}</p>
                     
-                    <button class="btn btn-primary mt-3">Order Now</button>
+                    <button onClick={handleOrder} class="btn btn-primary mt-3">Order Now</button>
                 </div>
             </div>
         </div>
