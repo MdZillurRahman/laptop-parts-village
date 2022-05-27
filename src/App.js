@@ -17,6 +17,7 @@ import Orders from './Components/Dashboard/Orders';
 import Review from './Components/Dashboard/Review';
 import Portfolio from './Components/Shared/Portfolio';
 import NotFound from './Components/Shared/NotFound';
+import AllUsers from './Components/Dashboard/AllUsers';
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
           <Route index element={<Orders></Orders>}></Route>
           <Route path="review" element={<Review></Review>}></Route>
           <Route path="profile" element={<Profile></Profile>}></Route>
+          <Route path="users" element={<AllUsers></AllUsers>}></Route>
         </Route>
       </Routes>
       <Footer></Footer>

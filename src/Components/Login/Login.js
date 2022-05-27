@@ -6,7 +6,6 @@ import auth from '../../firebase.init';
 import Loading from '../Shared/Loading';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useToken from '../../Hooks/useToken';
-// import useToken from '../../Hooks/useToken';
 
 
 const Login = () => {
