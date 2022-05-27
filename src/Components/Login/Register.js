@@ -5,11 +5,13 @@ import auth from '../../firebase.init';
 import Loading from '../Shared/Loading';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import useToken from '../../Hooks/useToken';
 
 const Register = () => {
     const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
     const [sendEmailVerification] = useSendEmailVerification(auth);
+    const [token] = useToken(user);
     const { register, formState: { errors }, handleSubmit } = useForm();
     const navigate = useNavigate();
 
@@ -20,7 +22,7 @@ const Register = () => {
         toast('Check Your Mail To Verify!')
     };
 
-    if (user) {
+    if (token) {
         navigate('/home');
     }
 

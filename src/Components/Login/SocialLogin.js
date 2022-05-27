@@ -5,11 +5,13 @@ import github from '../../Images/social/github.png';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import useToken from '../../Hooks/useToken';
 
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const location = useLocation();
     const navigate = useNavigate();
+    const [token] = useToken(user);
 
     let from = location.state?.from?.pathname || '/';
 
@@ -17,7 +19,7 @@ const SocialLogin = () => {
         navigate(from, {replace: true});
     }
 
-    if(user){
+    if(token){
         navigate('/home');
     }
 

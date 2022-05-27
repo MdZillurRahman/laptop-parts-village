@@ -16,6 +16,7 @@ import Dashboard from './Components/Dashboard/Dashboard';
 import Orders from './Components/Dashboard/Orders';
 import Review from './Components/Dashboard/Review';
 import Portfolio from './Components/Shared/Portfolio';
+import NotFound from './Components/Shared/NotFound';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/contactUs' element={<ContactUs></ContactUs>}></Route>
         <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
         <Route path='/tools/:id' element={
           <RequireAuth>
             <Purchase></Purchase>
