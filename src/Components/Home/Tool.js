@@ -24,6 +24,7 @@ const Tool = ({ tool, date }) => {
                     <h3 className='text-md'><b>Description:</b> {description} </h3>
                     <p><b>Minimum Order Quantity:</b> {minOrderQuantity}</p>
                     <p><b>Available Quantity:</b> {availableQuantity}</p>
+                    <p><b>Order Date:</b> {formattedDate}</p>
                     
                     <button onClick={() => handleOrder(_id)} class="btn btn-primary mt-3">Order Now</button>
                 </div>

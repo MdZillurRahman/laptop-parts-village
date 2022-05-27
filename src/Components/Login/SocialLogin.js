@@ -15,7 +15,7 @@ const SocialLogin = () => {
 
     let from = location.state?.from?.pathname || '/';
 
-    if(user){
+    if(token){
         navigate(from, {replace: true});
     }
 
