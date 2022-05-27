@@ -1,22 +1,93 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
+import UserProfile from './UserProfile';
 
 const Profile = () => {
+    const { register, handleSubmit} = useForm();
     const [user] = useAuthState(auth);
 
-    if (user) {
-        return (
-            <div className="card card-compact w-96 bg-base-100 shadow-xl">
-                <figure><img src = { user.photoURL } alt="Shoes" /></figure>
-                <div className="card-body">
-                    <h2 className="card-title">Name : {user.displayName}</h2>
-                    <h2 className="card-title">Email : {user.email}</h2>
-                    
+    const onSubmit = data => {
+        const url = `http://localhost:5000/userInfo/${user.email}`;
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+                if (result.upsertedCount === 1) {
+                    toast("Updated!!");
+                }
+                else {
+                    toast.error("Already Updated!!")
+                }
+            })
+    };
+
+    return (
+
+        <div>
+            <UserProfile></UserProfile>
+            <h2 className='text-2xl text-center my-4 text-primary'>Update Profile</h2>
+            <form className='flex flex-col justify-center' onSubmit={handleSubmit(onSubmit)}>
+                <div class="form-control w-full max-w-xs">
+                    <label class="label">
+                        <span class="label-text">Email</span>
+                    </label>
+                    <input type="email" value={user.email} class="input input-bordered w-full max-w-xs" {...register("email")} />
                 </div>
-            </div>
-        );
-    }
+
+                <div class="form-control w-full max-w-xs">
+                    <label class="label">
+                        <span class="label-text">Date of Birth</span>
+                    </label>
+                    <input type="text" placeholder="dd-mm-yy" class="input input-bordered w-full max-w-xs" {...register("birthDate", { required: true })} />
+                </div>
+
+                <div class="form-control w-full max-w-xs">
+                    <label class="label">
+                        <span class="label-text">Address</span>
+                    </label>
+                    <input type="" placeholder='Address' class="input input-bordered w-full max-w-xs" {...register("address",
+                        {
+                            required: {
+                                value: true
+                            }
+                        }
+                    )} />
+                </div>
+
+                <div class="form-control w-full max-w-xs">
+                    <label class="label">
+                        <span class="label-text">Phone Number</span>
+                    </label>
+                    <input type="phone" placeholder="Phone Number" class="input input-bordered w-full max-w-xs" {...register("phone", {
+                        required: {
+                            value: true
+                        },
+                        pattern: {
+                            value: /[0-9]/
+                        }
+                    })} />
+                </div>
+
+                <div class="form-control w-full max-w-xs">
+                    <label class="label">
+                        <span class="label-text">LinkedIn</span>
+                    </label>
+                    <input type="url" placeholder="url" class="input input-bordered w-full max-w-xs" {...register("profileLink", { required: true })} />
+                </div>
+                <button type='submit' class="btn btn-sm w-24 my-8">Update</button>
+
+            </form>
+        </div>
+
+    );
 };
 
 
