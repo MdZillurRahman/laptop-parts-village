@@ -3,9 +3,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/autoplay';
-import california from '../../Images/Warehouse/californiaWarehouse.jpg';
-import dhaka from '../../Images/Warehouse/DhakaWarehouse.jpg';
-import canada from '../../Images/Warehouse/canadaWarehouse.jpg';
+import california from '../../Images/New folder/californiaWarehouse.jpg';
+import dhaka from '../../Images/New folder/DhakaWarehouse.jpg';
+import canada from '../../Images/New folder/canadaWarehouse.jpg';
 
 const WareHouse = () => {
     return (

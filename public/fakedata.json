@@ -3,48 +3,48 @@
         "name": "Laptop Case",
         "img": "https://i.ibb.co/G2jQdzS/cooler-Fan.jpg",
         "description": "Wooden Sofa Set for your living space. Wonderful in color and shape. Affordable for anyone.",
-        "minOrderQuantity": 100,               
-        "availableQuantity" : 2000,
+        "minOrderQuantity": "100",               
+        "availableQuantity" : "2000",
         "price": "120"
     },
     {
         "name": "Laptop Processor",
         "img": "https://i.ibb.co/Vx10jh6/Wooden-Furniture.png",
         "description": "Wooden Sofa Set for your living space. Wonderful in color and shape. Affordable for anyone.",
-        "minOrderQuantity": 100,               
-        "availableQuantity" : 2000,
+        "minOrderQuantity": "100",               
+        "availableQuantity" : "2000",
         "price": "350"
     },
     {
         "name": "Cooler Fan",
         "img": "https://i.ibb.co/G2jQdzS/cooler-Fan.jpg",
         "description": "Wooden Sofa Set for your living space. Wonderful in color and shape. Affordable for anyone.",
-        "minOrderQuantity": 100,               
-        "availableQuantity" : 2000,
+        "minOrderQuantity": "100",               
+        "availableQuantity" : "2000",
         "price": "220"
     },
     {
         "name": "HardDisk",
         "img": "https://i.ibb.co/Vx10jh6/Wooden-Furniture.png",
         "description": "Wooden Sofa Set for your living space. Wonderful in color and shape. Affordable for anyone.",
-        "minOrderQuantity": 100,               
-        "availableQuantity" : 2000,
+        "minOrderQuantity": "100",               
+        "availableQuantity" : "2000",
         "price": "200"
     },
     {
         "name": "Solid State Disk",
         "img": "https://i.ibb.co/Vx10jh6/Wooden-Furniture.png",
         "description": "Wooden Sofa Set for your living space. Wonderful in color and shape. Affordable for anyone.",
-        "minOrderQuantity": 100,               
-        "availableQuantity" : 2000,
+        "minOrderQuantity": "100",               
+        "availableQuantity" : "2000",
         "price": "200"
     },
     {
         "name": "RAM",
         "img": "https://i.ibb.co/Vx10jh6/Wooden-Furniture.png",
         "description": "Wooden Sofa Set for your living space. Wonderful in color and shape. Affordable for anyone.",
-        "minOrderQuantity": 100,               
-        "availableQuantity" : 2000,
+        "minOrderQuantity": "100",               
+        "availableQuantity" : "2000",
         "price": "190"
     } 
 ]

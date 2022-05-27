@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import useTools from '../../Hooks/useTools';
-import Purchase from '../Purchase/Purchase';
+import { format } from 'date-fns';
 import Tool from './Tool';
 
-const Tools = () => {
-   const [tools] = useTools();
+const Tools = ({date}) => {
+    const [tools, setTools] = useState([]);
+    const formattedDate = format(date, 'PP');
+
+    useEffect(()=>{
+        fetch(`http://localhost:5000/tools`)
+        .then(res => res.json())
+        .then(data => setTools(data))
+    },[])
 
     return (
         <div >
@@ -16,7 +22,8 @@ const Tools = () => {
                 {
                     tools.map(tool => <Tool
                         key={tool._id}
-                        tool={tool}>
+                        tool={tool}
+                        date={date}>
                     </Tool>)
                 }
             </div>

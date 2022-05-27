@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
 
-const useTools = () =>{
+const useToolDetail = toolId =>{
     const [tools, setTools] = useState([]);
 
-    useEffect(()=>{
-        fetch('http://localhost:5000/tools')
-        .then(res => res.json())
-        .then(data => setTools(data))
-    },[])
+    useEffect( () =>{
+        const url = `http://localhost:5000/tools`;
+        fetch(url)
+        .then(res=> res.json())
+        .then(data => setTools(data));
+
+    }, [toolId]);
     return [tools, setTools];
 }
 
-export default useTools;
+export default useToolDetail;

@@ -10,7 +10,7 @@ const useToolDetail = toolId =>{
         .then(data => setTool(data));
 
     }, [toolId]);
-    return [tool,setTool];
+    return [tool, setTool];
 }
 
 export default useToolDetail;

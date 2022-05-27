@@ -1,9 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Purchase from '../Purchase/Purchase';
+import { format } from 'date-fns';
 
-const Tool = ({ tool }) => {
+const Tool = ({ tool, date }) => {
     const { _id, name, img, description, minOrderQuantity, availableQuantity, price } = tool;
+    
+    const formattedDate = format(date, 'PP');
     const navigate = useNavigate();
 
     const handleOrder = (id) =>{

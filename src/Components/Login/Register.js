@@ -5,30 +5,23 @@ import auth from '../../firebase.init';
 import Loading from '../Shared/Loading';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import SocialLogin from './SocialLogin';
 
 const Register = () => {
-    const [
-        createUserWithEmailAndPassword,
-        user,
-        loading,
-        error,
-    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
     const [sendEmailVerification] = useSendEmailVerification(auth);
-
     const { register, formState: { errors }, handleSubmit } = useForm();
     const navigate = useNavigate();
 
     const onSubmit = async data => {
         await createUserWithEmailAndPassword(data.email, data.password);
-        await updateProfile({ displayName: data.name });
+        await updateProfile({ displayName: data.name});
         await sendEmailVerification(data.email);
         toast('Check Your Mail To Verify!')
     };
 
     if (user) {
-        navigate('/appointment');
+        navigate('/home');
     }
 
     if (loading || updating) {
@@ -115,7 +108,7 @@ const Register = () => {
                                 {errors.password?.type === 'minLength' && <p className='text-red-500'>{errors.password.message}</p>}
                             </label>
                         </div>
-
+                        
                         <input className='btn btn-outline btn-primary w-full max-w-xs' type="submit" value="Sign Up" />
                     </form>
                     <p className='text-center'>Already Have An Account? <Link to='/login' className='text-primary'>Please Login</Link> </p>
