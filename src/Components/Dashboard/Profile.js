@@ -7,11 +7,11 @@ const Profile = () => {
 
     if (user) {
         return (
-            <div class="card card-compact w-96 bg-base-100 shadow-xl">
+            <div className="card card-compact w-96 bg-base-100 shadow-xl">
                 <figure><img src = { user.photoURL } alt="Shoes" /></figure>
-                <div class="card-body">
-                    <h2 class="card-title">Name : {user.displayName}</h2>
-                    <h2 class="card-title">Email : {user.email}</h2>
+                <div className="card-body">
+                    <h2 className="card-title">Name : {user.displayName}</h2>
+                    <h2 className="card-title">Email : {user.email}</h2>
                     
                 </div>
             </div>

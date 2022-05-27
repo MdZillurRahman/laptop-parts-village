@@ -20,8 +20,8 @@ const Portfolio = () => {
             </div >
             <div>
                 <h2 className='text-center text-4xl my-8'>Academic Qualification</h2>
-                <div class="overflow-x-auto px-16 mb-8">
-                    <table class="table w-full ">
+                <div className="overflow-x-auto px-16 mb-8">
+                    <table className="table w-full ">
                         <thead>
                             <tr>
                                 <th>Degree</th>
@@ -39,7 +39,7 @@ const Portfolio = () => {
                                 <td>University of Dhaka</td>
                                 <td>2021</td>
                             </tr>
-                            <tr class="active">
+                            <tr className="active">
                                 <th>HSC</th>
                                 <td>Science</td>
                                 <td>GPA 5.00</td>

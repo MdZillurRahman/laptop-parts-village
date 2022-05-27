@@ -1,11 +1,9 @@
 import React from 'react';
 import { useQuery } from 'react-query';
-
 import Loading from '../Shared/Loading';
 import User from './User';
 
 const AllUsers = () => {
-
 
     const { data: users, isLoading, refetch } = useQuery('users', ()=>
         fetch('http://localhost:5000/user',{
@@ -25,7 +23,7 @@ const AllUsers = () => {
         <div>
             <h2 className="text-2xl text-center">All Users: {users.length}</h2>
             <div className="overflow-x-auto">
-            <table class="table w-full">
+            <table className="table w-full">
                     <thead>
                         <tr>
                             <th></th>

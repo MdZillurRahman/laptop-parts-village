@@ -72,56 +72,56 @@ const Purchase = () => {
 
     return (
         <div className='flex justify-center items-center my-12'>
-            <div class="card card-compact w-lg bg-base-100 shadow-xl">
+            <div className="card card-compact w-lg bg-base-100 shadow-xl">
                 <div>
-                    <h2 class="text-center text-3xl font-bold text-primary mb-6">{name}</h2>
+                    <h2 className="text-center text-3xl font-bold text-primary mb-6">{name}</h2>
                     <figure><img className='rounded-lg' src={img} alt="Shoes" /></figure>
                 </div>
                 <form onSubmit={handlePurchase}>
-                    <div class="card-body">
-                        <div class="form-control w-full max-w-full">
+                    <div className="card-body">
+                        <div className="form-control w-full max-w-full">
                             <p className='font-bold text-lg mr-2'>Name: </p>
-                            <input type="text" disabled value={user.displayName} class="input input-bordered w-full max-w-full" />
+                            <input type="text" disabled value={user.displayName} className="input input-bordered w-full max-w-full" />
                         </div>
-                        <div class="form-control w-full max-w-full">
+                        <div className="form-control w-full max-w-full">
                             <p className='font-bold text-lg mr-2'>Email </p>
-                            <input type="text" disabled value={user.email} class="input input-bordered w-full max-w-full" />
+                            <input type="text" disabled value={user.email} className="input input-bordered w-full max-w-full" />
                         </div>
-                        <div class="form-control w-full max-w-full">
+                        <div className="form-control w-full max-w-full">
                             <p className='font-bold text-lg mr-2'>Address: </p>
-                            <textarea required class="textarea textarea-bordered w-full"></textarea>
+                            <textarea required className="textarea textarea-bordered w-full"></textarea>
                         </div>
-                        <div class="form-control w-full max-w-full">
+                        <div className="form-control w-full max-w-full">
                             <p className='font-bold text-lg mr-2'>Phone Number: </p>
-                            <input required type="phoneNumber" class="input input-bordered w-full max-w-full"
+                            <input required type="phoneNumber" className="input input-bordered w-full max-w-full"
                                 {...register("phoneNumber", {
                                     pattern: {
                                         value: /[0-9]/
                                     }
                                 })} />
                         </div>
-                        <div class="form-control w-full max-w-full">
+                        <div className="form-control w-full max-w-full">
                             <p className='font-bold text-lg mr-2'>Price per unit: </p>
-                            <input type="text" disabled value={price} class="input input-bordered w-full max-w-full" />
+                            <input type="text" disabled value={price} className="input input-bordered w-full max-w-full" />
                         </div>
-                        <div class="form-control w-full max-w-full">
+                        <div className="form-control w-full max-w-full">
                             <p className='font-bold text-lg mr-2'>Available Quantity: </p>
                             <input disabled type='number' value={availableQuantity}
-                                class="input input-bordered w-full max-w-full" />
+                                className="input input-bordered w-full max-w-full" />
                         </div>
                         <div onChange={handleQuantity}>
-                            <div class="form-control w-full max-w-full">
+                            <div className="form-control w-full max-w-full">
                                 <p className='font-bold text-lg mr-2'>Quantity: </p>
-                                <input name='quantity' type="quantity" defaultValue={minOrderQuantity} class="input input-bordered w-full max-w-full" />
+                                <input name='quantity' type="quantity" defaultValue={minOrderQuantity} className="input input-bordered w-full max-w-full" />
                             </div>
-                            <div class="form-control w-full max-w-full">
+                            <div className="form-control w-full max-w-full">
                                 <p className='font-bold text-lg mr-2'>Total Price: </p>
-                                <input type="price" disabled Value={minOrderQuantity * price} class="input input-bordered w-full max-w-full" />
+                                <input type="price" disabled Value={minOrderQuantity * price} className="input input-bordered w-full max-w-full" />
                             </div>
                         </div>
-                        <div class="card-actions justify-center mt-12">
+                        <div className="card-actions justify-center mt-12">
 
-                            <button type='submit' class="btn btn-primary">Purchase</button>
+                            <button type='submit' className="btn btn-primary">Purchase</button>
                         </div>
                     </div>
                 </form>

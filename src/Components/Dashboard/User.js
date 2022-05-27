@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
 const User = ({ user, index, refetch }) => {
     const makeAdmin = () => {
@@ -8,18 +9,25 @@ const User = ({ user, index, refetch }) => {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`
             }
         })
-        .then(res => res.json())
-        .then(data => {
-            refetch();
-        })
+            .then(res => {
+                if (res.status === 403) {
+                    toast.error('failed to make an admin');
+                }
+                return res.json()})
+            .then(data => {
+                if (data.modifiedCount > 0) {
+                    refetch();
+                    toast("Admin Selected!!")
+                }
+            })
     }
     return (
         <div>
             <tr>
                 <th>{index + 1}</th>
                 <td>{user.email}</td>
-                <td>{user.role !== 'admin' && <button onClick={makeAdmin} class="btn btn-xs">Make Admin</button>}</td>
-                <td><button class="btn btn-xs">X</button></td>
+                <td>{user.role !== 'admin' && <button onClick={makeAdmin} className="btn btn-xs">Make Admin</button>}</td>
+                <td><button className="btn btn-xs">X</button></td>
             </tr>
         </div>
     );
