@@ -35,25 +35,25 @@ const Profile = () => {
             <UserProfile></UserProfile>
             <h2 className='text-2xl text-center my-4 text-primary'>Update Profile</h2>
             <form className='flex flex-col justify-center' onSubmit={handleSubmit(onSubmit)}>
-                <div class="form-control w-full max-w-xs">
-                    <label class="label">
-                        <span class="label-text">Email</span>
+                <div className="form-control w-full max-w-xs">
+                    <label className="label">
+                        <span className="label-text">Email</span>
                     </label>
-                    <input type="email" value={user.email} class="input input-bordered w-full max-w-xs" {...register("email")} />
+                    <input type="email" value={user.email} className="input input-bordered w-full max-w-xs" {...register("email")} />
                 </div>
 
-                <div class="form-control w-full max-w-xs">
-                    <label class="label">
-                        <span class="label-text">Date of Birth</span>
+                <div className="form-control w-full max-w-xs">
+                    <label className="label">
+                        <span className="label-text">Date of Birth</span>
                     </label>
-                    <input type="text" placeholder="dd-mm-yy" class="input input-bordered w-full max-w-xs" {...register("birthDate", { required: true })} />
+                    <input type="text" placeholder="dd-mm-yy" className="input input-bordered w-full max-w-xs" {...register("birthDate", { required: true })} />
                 </div>
 
-                <div class="form-control w-full max-w-xs">
-                    <label class="label">
-                        <span class="label-text">Address</span>
+                <div className="form-control w-full max-w-xs">
+                    <label className="label">
+                        <span className="label-text">Address</span>
                     </label>
-                    <input type="" placeholder='Address' class="input input-bordered w-full max-w-xs" {...register("address",
+                    <input type="" placeholder='Address' className="input input-bordered w-full max-w-xs" {...register("address",
                         {
                             required: {
                                 value: true
@@ -62,11 +62,11 @@ const Profile = () => {
                     )} />
                 </div>
 
-                <div class="form-control w-full max-w-xs">
-                    <label class="label">
-                        <span class="label-text">Phone Number</span>
+                <div className="form-control w-full max-w-xs">
+                    <label className="label">
+                        <span className="label-text">Phone Number</span>
                     </label>
-                    <input type="phone" placeholder="Phone Number" class="input input-bordered w-full max-w-xs" {...register("phone", {
+                    <input type="phone" placeholder="Phone Number" className="input input-bordered w-full max-w-xs" {...register("phone", {
                         required: {
                             value: true
                         },
@@ -76,13 +76,13 @@ const Profile = () => {
                     })} />
                 </div>
 
-                <div class="form-control w-full max-w-xs">
-                    <label class="label">
-                        <span class="label-text">LinkedIn</span>
+                <div className="form-control w-full max-w-xs">
+                    <label className="label">
+                        <span className="label-text">LinkedIn</span>
                     </label>
-                    <input type="url" placeholder="url" class="input input-bordered w-full max-w-xs" {...register("profileLink", { required: true })} />
+                    <input type="url" placeholder="url" className="input input-bordered w-full max-w-xs" {...register("profileLink", { required: true })} />
                 </div>
-                <button type='submit' class="btn btn-sm w-24 my-8">Update</button>
+                <button type='submit' className="btn btn-sm w-24 my-8">Update</button>
 
             </form>
         </div>

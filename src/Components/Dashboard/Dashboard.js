@@ -17,7 +17,7 @@ const [admin] = useAdmin(user);
                 
             </div>
             <div className="drawer-side">
-                <label for="dashboard_Sidebar" className="drawer-overlay"></label>
+                <label htmlFor="dashboard_Sidebar" className="drawer-overlay"></label>
                 <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
                     {
                         !admin &&

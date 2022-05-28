@@ -34,6 +34,14 @@ const Blogs = () => {
                     <h4 className='text-xl'><b>Question 4: </b> What is a unit test? Why should write unit tests?</h4>
                     <h4><b>Answer:</b>Unit tests are typically automated tests written and run by software developers to ensure that a section of an application (known as the "unit") meets its design and behaves <span className='ml-12'>as intended. In procedural programming, a unit could be an entire module, but it is more commonly an individual function or procedure.</span></h4>
                 </div>
+                <div className='mb-6'>
+                    <h4 className='text-xl'><b>Question 5: </b> Why you do not set the state directly in React. For example, if you have const [products, setProducts] = useState([]). Why you do not set products = [...] instead, you use the setProducts.</h4>
+                    <h4><b>Answer:</b> We use setProducts instead of products = [...], so that we can add as many products as we want and it will be less time consuming.</h4>
+                </div>
+                <div className='mb-6'>
+                    <h4 className='text-xl'><b>Question 5: </b> You have an array of products. Each product has a name, price, description, etc. How will you implement a search to find products by name?</h4>
+                    <h4><b>Answer:</b> I can set a query in backend where i will search in the product collection. and i will get that api to search the products by name.</h4>
+                </div>
             </div>
         </div>
     );

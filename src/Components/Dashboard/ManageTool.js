@@ -22,8 +22,8 @@ const ManageTool = () => {
     return (
         <div>
             <h2 className='text-2xl text-center'>Manage Tools</h2>
-            <div class=" flex justify-center mt-8">
-                <table class="table w-80">
+            <div className=" flex justify-center mt-8">
+                <table className="table w-80">
                     <thead>
                         <tr>
                             <th>Name</th>

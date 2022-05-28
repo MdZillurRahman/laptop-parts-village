@@ -31,7 +31,7 @@ const User = ({ user, index, refetch, setDeletingUser }) => {
                 <td>{user.email}</td>
                 <td>{user.role !== 'admin' && <button onClick={makeAdmin} className="btn btn-xs">Make Admin</button>}</td>
                 <td>
-                    <label onClick={() => setDeletingUser(user)} for="delete-confirm-modal" class="btn btn-xs modal-button">Remove User</label>
+                    <label onClick={() => setDeletingUser(user)} htmlFor="delete-confirm-modal" className="btn btn-xs modal-button">Remove User</label>
                 </td>
             </tr>
     );

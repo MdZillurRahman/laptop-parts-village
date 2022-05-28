@@ -26,18 +26,18 @@ const Review = () => {
         <div>
             <h2 className='text-2xl text-center'>Add A Review</h2>
             <form className='flex flex-col justify-center' onSubmit={handleSubmit(onSubmit)}>
-                <div class="form-control w-full max-w-xs">
-                    <label class="label">
-                        <span class="label-text">Name</span>
+                <div className="form-control w-full max-w-xs">
+                    <label className="label">
+                        <span className="label-text">Name</span>
                     </label>
-                    <input type="text" placeholder="Name" class="input input-bordered w-full max-w-xs" {...register("name", { required: true, maxLength: 20 })} />
+                    <input type="text" placeholder="Name" className="input input-bordered w-full max-w-xs" {...register("name", { required: true, maxLength: 20 })} />
                 </div>
 
-                <div class="form-control w-full max-w-xs">
-                    <label class="label">
-                        <span class="label-text">Tool Name</span>
+                <div className="form-control w-full max-w-xs">
+                    <label className="label">
+                        <span className="label-text">Tool Name</span>
                     </label>
-                    <input type="" placeholder='Tool Name' class="input input-bordered w-full max-w-xs" {...register("review",
+                    <input type="" placeholder='Tool Name' className="input input-bordered w-full max-w-xs" {...register("review",
                         {
                             required: {
                                 value: true
@@ -46,36 +46,36 @@ const Review = () => {
                     )} />
                 </div>
 
-                <div class="form-control w-full max-w-xs">
-                    <label class="label">
-                        <span class="label-text">Location</span>
+                <div className="form-control w-full max-w-xs">
+                    <label className="label">
+                        <span className="label-text">Location</span>
                     </label>
-                    <input type="text" placeholder="Location" class="input input-bordered w-full max-w-xs" {...register("location", {
+                    <input type="text" placeholder="Location" className="input input-bordered w-full max-w-xs" {...register("location", {
                         required: {
                             value: true
                         }
                     })} />
                 </div>
 
-                <div class="form-control w-full max-w-xs">
-                    <label class="label">
-                        <span class="label-text">Description</span>
+                <div className="form-control w-full max-w-xs">
+                    <label className="label">
+                        <span className="label-text">Description</span>
                     </label>
-                    <input type="text" placeholder="Tool Description" class="input input-bordered w-full max-w-xs" {...register("description", {
+                    <input type="text" placeholder="Tool Description" className="input input-bordered w-full max-w-xs" {...register("description", {
                         required: {
                             value: true
                         }   
                     })} />
                 </div>
 
-                <div class="form-control w-full max-w-xs">
-                    <label class="label">
-                        <span class="label-text">Image URL</span>
+                <div className="form-control w-full max-w-xs">
+                    <label className="label">
+                        <span className="label-text">Image URL</span>
                     </label>
-                    <input type="url" placeholder="url" class="input input-bordered w-full max-w-xs" {...register("img", { required: true })} />
+                    <input type="url" placeholder="url" className="input input-bordered w-full max-w-xs" {...register("img", { required: true })} />
                 </div>
                 
-                <button type='submit' class="btn btn-sm w-24 mt-8">Add Review</button>
+                <button type='submit' className="btn btn-sm w-24 mt-8">Add Review</button>
 
             </form>
         </div>
