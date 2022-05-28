@@ -32,7 +32,7 @@ const Profile = () => {
     return (
 
         <div>
-            {/* <UserProfile></UserProfile>
+            <UserProfile></UserProfile>
             <h2 className='text-2xl text-center my-4 text-primary'>Update Profile</h2>
             <form className='flex flex-col justify-center' onSubmit={handleSubmit(onSubmit)}>
                 <div class="form-control w-full max-w-xs">
@@ -85,7 +85,7 @@ const Profile = () => {
                 <button type='submit' class="btn btn-sm w-24 my-8">Update</button>
 
             </form>
-        </div> */}
+        </div>
 
     );
 };
