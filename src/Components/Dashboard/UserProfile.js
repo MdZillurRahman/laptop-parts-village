@@ -9,9 +9,8 @@ const UserProfile = () => {
     useEffect(() => {
         fetch(`http://localhost:5000/userInfo/${user.email}`)
             .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                setUserInfo(data)
+            .then(data => { 
+                setUserInfo(data);
             })
     }, [user]);
 

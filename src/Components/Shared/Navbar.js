@@ -5,21 +5,24 @@ import { Link, useParams } from 'react-router-dom';
 import logo from '../../Images/icon.png';
 import auth from '../../firebase.init';
 import icon from '../../Images/user-icon.png';
+import Loading from './Loading';
 
 const Navbar = () => {
-    const [user] = useAuthState(auth);
-    
+    const [user, loading] = useAuthState(auth);    
 
     const logout = () => {
         signOut(auth);
         localStorage.removeItem('accessToken');
     };
+    
+    if(loading){
+        return <Loading></Loading>
+    }
 
 
     const navbar = <>
         <li><Link to='/home'>Home</Link></li>
         <li><Link to='/blogs'>Blogs</Link></li>
-        <li><Link to='/reviews'>Reviews</Link></li>
         <li><Link to='/portfolio'>Portfolio</Link></li>
         <li><Link to='/contactUs'>Contact Us</Link></li>
         {
@@ -29,7 +32,7 @@ const Navbar = () => {
             <div className="dropdown dropdown-end">
                 <label tabIndex="3" className="btn"><img className='w-8' src={icon} alt="" /></label>
                 <ul tabIndex="4" className="dropdown-content shadow bg-base-100 rounded-box w-36 mt-36">
-                    <Link className='text-center' to='/profile'>{user.displayName}</Link>
+                    <Link className='text-center' to='/profile'>{user?.displayName}</Link>
                     <button onClick={logout}> Sign Out</button>
                 </ul></div>
             :

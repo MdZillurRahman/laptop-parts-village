@@ -23,20 +23,20 @@ const ManageTool = () => {
         <div>
             <h2 className='text-2xl text-center'>Manage Tools</h2>
             <div class=" flex justify-center mt-8">
-                <table class="table w-64">
+                <table class="table w-80">
                     <thead>
                         <tr>
                             <th>Name</th>
+                            <th>Remove Tool</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            tools.map(tool => <div key={tool._id}>
-                                <tr>
+                            tools.map(tool =>
+                                <tr key={tool._id}>
                                     <th>{tool.name}</th>
-                                    <td><button onClick={() => handleDelete(tool._id)}>X</button></td>
-                                </tr>
-                            </div>)
+                                    <td className='text-center'><button className='border-4 rounded-xl' onClick={() => handleDelete(tool._id)}>X</button></td>
+                                </tr>)
                         }
                     </tbody>
                 </table>

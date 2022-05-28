@@ -74,6 +74,7 @@ const Review = () => {
                     </label>
                     <input type="url" placeholder="url" class="input input-bordered w-full max-w-xs" {...register("img", { required: true })} />
                 </div>
+                
                 <button type='submit' class="btn btn-sm w-24 mt-8">Add Review</button>
 
             </form>

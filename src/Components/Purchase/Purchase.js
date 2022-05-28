@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
@@ -13,9 +13,12 @@ const Purchase = () => {
     const { name, _id, img, price, minOrderQuantity, availableQuantity } = tool;
     const { register, setValue } = useForm();
 
-    const handleQuantity = (event) => {
-        const newQuantity = event.target.quantity.value;
+    const quantity = useRef('');
+
+    const handleQuantity = () => {
+        const newQuantity = quantity.current.value;
         const final = newQuantity * price;
+        
         setValue("total", final);
         if (newQuantity < minOrderQuantity || newQuantity > availableQuantity) {
             toast(`Minimum Order quantity is ${minOrderQuantity}. Please select a value between ${minOrderQuantity} and ${availableQuantity}`);
@@ -24,7 +27,7 @@ const Purchase = () => {
 
     const handlePurchase = (event) => {
         event.preventDefault();
-        const newQuantity = event.target.quantity.value;
+        const newQuantity = quantity.current.value;
         const final = newQuantity * price;
 
         const purchase = {
@@ -51,10 +54,7 @@ const Purchase = () => {
                 console.log(data);
                 toast("Succesfully Purchased");
             })
-
-
-        const updateQuantity = availableQuantity - newQuantity;
-        console.log(updateQuantity);    
+ 
         fetch(`http://localhost:5000/tools/${_id}`, {
             method: 'PATCH',
             headers: {
@@ -112,16 +112,21 @@ const Purchase = () => {
                         <div onChange={handleQuantity}>
                             <div className="form-control w-full max-w-full">
                                 <p className='font-bold text-lg mr-2'>Quantity: </p>
-                                <input name='quantity' type="quantity" defaultValue={minOrderQuantity} className="input input-bordered w-full max-w-full" />
+                                <input ref={quantity} type="quantity" defaultValue={minOrderQuantity} className="input input-bordered w-full max-w-full" />
                             </div>
                             <div className="form-control w-full max-w-full">
                                 <p className='font-bold text-lg mr-2'>Total Price: </p>
-                                <input type="price" disabled Value={minOrderQuantity * price} className="input input-bordered w-full max-w-full" />
+                                <input name="total" type="total" placeholder={minOrderQuantity * price} className="input input-bordered w-full max-w-full" />
                             </div>
                         </div>
                         <div className="card-actions justify-center mt-12">
-
-                            <button type='submit' className="btn btn-primary">Purchase</button>
+                            {
+                                quantity.current.value < minOrderQuantity || quantity.current.value > availableQuantity ?
+                                <button disabled type='submit' className="btn btn-primary">Purchase</button>
+                                :
+                                <button type='submit' className="btn btn-primary">Purchase</button>
+                            }
+                            
                         </div>
                     </div>
                 </form>

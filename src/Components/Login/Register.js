@@ -10,7 +10,7 @@ import useToken from '../../Hooks/useToken';
 const Register = () => {
     const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
-    const [sendEmailVerification] = useSendEmailVerification(auth);
+    // const [sendEmailVerification] = useSendEmailVerification(auth);
     const [token] = useToken(user);
     const { register, formState: { errors }, handleSubmit } = useForm();
     const navigate = useNavigate();
@@ -18,8 +18,8 @@ const Register = () => {
     const onSubmit = async data => {
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({ displayName: data.name});
-        await sendEmailVerification(data.email);
-        toast('Check Your Mail To Verify!')
+        // await sendEmailVerification(data.email);
+        toast('You are Registered.');
     };
 
     if (token) {
