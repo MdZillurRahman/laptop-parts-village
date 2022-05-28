@@ -19,7 +19,6 @@ const Register = () => {
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({ displayName: data.name});
         // await sendEmailVerification(data.email);
-        toast('You are Registered.');
     };
 
     if (token) {

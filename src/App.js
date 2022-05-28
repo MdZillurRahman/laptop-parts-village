@@ -47,7 +47,7 @@ function App() {
             <Dashboard></Dashboard>
           </RequireAuth>
         }>
-          <Route index element={<Orders></Orders>}></Route>
+          <Route path='orders' element={<Orders></Orders>}></Route>
           <Route path="review" element={<Review></Review>}></Route>
           <Route path="profile" element={<Profile></Profile>}></Route>
           <Route path="payment/:id" element={<Payment></Payment>}></Route>

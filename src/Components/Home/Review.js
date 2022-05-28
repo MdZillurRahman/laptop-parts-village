@@ -15,13 +15,7 @@ const Review = ({ review }) => {
                     <div>
                         <h4 className='text-xl'>{review.name}</h4>
                         <p>{review.location}</p>
-                        <div aria-disabled className="rating rating-sm">
-                            <input type="radio" name="rating-7" className="mask mask-star-2 bg-orange-400" />
-                            <input type="radio" name="rating-7" className="mask mask-star-2 bg-orange-400"/>
-                            <input type="radio" name="rating-7" className="mask mask-star-2 bg-orange-400" />
-                            <input type="radio" name="rating-7" className="mask mask-star-2 bg-orange-400" />
-                            <input type="radio" name="rating-7" className="mask mask-star-2 bg-orange-400" />
-                        </div>
+                        
                     </div>
                 </div>
             </div>

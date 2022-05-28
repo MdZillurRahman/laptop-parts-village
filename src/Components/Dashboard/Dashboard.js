@@ -22,7 +22,7 @@ const [admin] = useAdmin(user);
                     {
                         !admin &&
                         <>
-                        <li><Link to="/dashboard">My Orders</Link></li>
+                        <li><Link to="/dashboard/orders">My Orders</Link></li>
                     <li><Link to="/dashboard/review">Add a Review</Link></li>
                         </>
                     }

@@ -1,50 +1,50 @@
 [
     {
         "name": "Laptop Case",
-        "img": "https://i.ibb.co/G2jQdzS/cooler-Fan.jpg",
-        "description": "Wooden Sofa Set for your living space. Wonderful in color and shape. Affordable for anyone.",
-        "minOrderQuantity": "100",               
-        "availableQuantity" : "2000",
+        "img": "https://i.ibb.co/n6dzR69/laptop-Case.png",
+        "description": "Laptop case is useful for laptop. Our laptop case quality is better than many products in the market.",
+        "minOrderQuantity": "100",
+        "availableQuantity": "2000",
         "price": "120"
     },
     {
         "name": "Laptop Processor",
-        "img": "https://i.ibb.co/Vx10jh6/Wooden-Furniture.png",
-        "description": "Wooden Sofa Set for your living space. Wonderful in color and shape. Affordable for anyone.",
-        "minOrderQuantity": "100",               
-        "availableQuantity" : "2000",
+        "img": "https://i.ibb.co/zh9g37X/processor.png",
+        "description": "Laptop processor is useful for laptop. Our laptop processor quality is better than many products in the market.",
+        "minOrderQuantity": "100",
+        "availableQuantity": "2000",
         "price": "350"
     },
     {
         "name": "Cooler Fan",
-        "img": "https://i.ibb.co/G2jQdzS/cooler-Fan.jpg",
-        "description": "Wooden Sofa Set for your living space. Wonderful in color and shape. Affordable for anyone.",
-        "minOrderQuantity": "100",               
-        "availableQuantity" : "2000",
+        "img": "https://i.ibb.co/9vLFbnD/cooler-Fan.png",
+        "description": "Laptop fan is useful for laptop. Our laptop fan quality is better than many products in the market.",
+        "minOrderQuantity": "100",
+        "availableQuantity": "2000",
         "price": "220"
     },
     {
         "name": "HardDisk",
-        "img": "https://i.ibb.co/Vx10jh6/Wooden-Furniture.png",
-        "description": "Wooden Sofa Set for your living space. Wonderful in color and shape. Affordable for anyone.",
-        "minOrderQuantity": "100",               
-        "availableQuantity" : "2000",
+        "img": "https://i.ibb.co/DRgTDM3/hdd.png",
+        "description": "Laptop HardDisk is useful for laptop. Our laptop HardDisk quality is better than many products in the market.",
+        "minOrderQuantity": "100",
+        "availableQuantity": "2000",
         "price": "200"
     },
     {
         "name": "Solid State Disk",
-        "img": "https://i.ibb.co/Vx10jh6/Wooden-Furniture.png",
-        "description": "Wooden Sofa Set for your living space. Wonderful in color and shape. Affordable for anyone.",
-        "minOrderQuantity": "100",               
-        "availableQuantity" : "2000",
+        "img": "https://i.ibb.co/LdWDPJ9/ssd.png",
+        "description": "Laptop SSD is useful for laptop. Our laptop SSD quality is better than many products in the market.",
+        "minOrderQuantity": "100",
+        "availableQuantity": "2000",
         "price": "200"
     },
     {
         "name": "RAM",
-        "img": "https://i.ibb.co/Vx10jh6/Wooden-Furniture.png",
-        "description": "Wooden Sofa Set for your living space. Wonderful in color and shape. Affordable for anyone.",
-        "minOrderQuantity": "100",               
-        "availableQuantity" : "2000",
+        "img": "https://i.ibb.co/kJdtWsp/ram.png",
+        "description": "Laptop ram is useful for laptop. Our laptop ram quality is better than many products in the market.",
+        "minOrderQuantity": "100",
+        "availableQuantity": "2000",
         "price": "190"
-    } 
+    }
 ]
