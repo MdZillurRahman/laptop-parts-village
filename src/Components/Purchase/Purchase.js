@@ -17,9 +17,7 @@ const Purchase = () => {
 
     const handleQuantity = () => {
         const newQuantity = quantity.current.value;
-        const final = newQuantity * price;
         
-        setValue("total", final);
         if (newQuantity < minOrderQuantity || newQuantity > availableQuantity) {
             toast(`Minimum Order quantity is ${minOrderQuantity}. Please select a value between ${minOrderQuantity} and ${availableQuantity}`);
         }
@@ -113,10 +111,6 @@ const Purchase = () => {
                             <div className="form-control w-full max-w-full">
                                 <p className='font-bold text-lg mr-2'>Quantity: </p>
                                 <input ref={quantity} type="quantity" defaultValue={minOrderQuantity} className="input input-bordered w-full max-w-full" />
-                            </div>
-                            <div className="form-control w-full max-w-full">
-                                <p className='font-bold text-lg mr-2'>Total Price: </p>
-                                <input name="total" type="total" placeholder={minOrderQuantity * price} className="input input-bordered w-full max-w-full" />
                             </div>
                         </div>
                         <div className="card-actions justify-center mt-12">

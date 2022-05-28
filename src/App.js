@@ -34,7 +34,6 @@ function App() {
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
-        <Route path='/contactUs' element={<ContactUs></ContactUs>}></Route>
         <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
         <Route path='/tools/:id' element={

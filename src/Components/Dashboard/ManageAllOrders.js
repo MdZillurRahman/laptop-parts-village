@@ -1,14 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
-import auth from '../../firebase.init';
 
 const ManageAllOrders = () => {
     const [orders, setOrders] = useState([]);
-    const [user] = useAuthState(auth);
 
     useEffect(() => {
-        if (user) {
             fetch(`http://localhost:5000/purchase`, {
                 method: 'GET',
                 headers: {
@@ -21,13 +17,12 @@ const ManageAllOrders = () => {
                 .then(data => {
                     setOrders(data);
                 });
-        }
-    }, [user])
+    }, [])
 
     return (
         <div>
-            <h2 className='text-xl text-primary text-center'>Manage All Orders</h2>
-            <div className="overflow-x-auto">
+            <h2 className='text-xl text-primary text-center my-4'>Manage All Orders</h2>
+            <div className="overflow-x-auto my-4">
                 <table className="table w-full">
                     <thead>
                         <tr>
@@ -41,7 +36,7 @@ const ManageAllOrders = () => {
                     </thead>
                     <tbody>
                         {
-                            orders.map((order, index) =>
+                            orders.length && orders?.map((order, index) =>
                                 <tr>
                                     <th>{index + 1}</th>
                                     <td>{order.userName}</td>
