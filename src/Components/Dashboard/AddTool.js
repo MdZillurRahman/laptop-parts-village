@@ -24,19 +24,19 @@ const AddTool = () => {
 
         // console.log(data);
 
-        // const url = 'http://localhost:5000/tools';
-        // fetch(url, {
-        //     method: 'POST',
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(data)
-        // })
-        //     .then(res => res.json())
-        //     .then(result => {
-        //         console.log(result);
-        //         toast('Review Added')
-        //     })
+        const url = 'http://localhost:5000/tools';
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+                console.log(result);
+                toast('Review Added')
+            })
     };
 
     return (
