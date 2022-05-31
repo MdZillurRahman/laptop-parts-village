@@ -114,12 +114,12 @@ const Purchase = () => {
                             </div>
                         </div>
                         <div className="card-actions justify-center mt-12">
-                            {
+                            {/* {
                                 quantity.current.value < minOrderQuantity || quantity.current.value > availableQuantity ?
                                 <button disabled type='submit' className="btn btn-primary">Purchase</button>
-                                :
+                                : */}
                                 <button type='submit' className="btn btn-primary">Purchase</button>
-                            }
+                            {/* } */}
                             
                         </div>
                     </div>
