@@ -40,7 +40,7 @@ const Purchase = () => {
         }
 
 
-        fetch('http://localhost:5000/purchase', {
+        fetch('https://stark-cove-59535.herokuapp.com/purchase', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -53,7 +53,7 @@ const Purchase = () => {
                 toast("Succesfully Purchased");
             })
  
-        fetch(`http://localhost:5000/tools/${_id}`, {
+        fetch(`https://stark-cove-59535.herokuapp.com/tools/${_id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

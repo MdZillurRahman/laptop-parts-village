@@ -7,7 +7,7 @@ const Review = () => {
 
     const onSubmit = data => {
 
-        const url = 'http://localhost:5000/reviews';
+        const url = 'https://stark-cove-59535.herokuapp.com/reviews';
         fetch(url, {
             method: 'POST',
             headers: {

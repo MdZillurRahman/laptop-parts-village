@@ -7,7 +7,7 @@ const Tools = ({date}) => {
     const formattedDate = format(date, 'PP');
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/tools`)
+        fetch(`https://stark-cove-59535.herokuapp.com/tools`)
         .then(res => res.json())
         .then(data => setTools(data))
     },[])

@@ -24,7 +24,7 @@ const AddTool = () => {
 
         // console.log(data);
 
-        const url = 'http://localhost:5000/tools';
+        const url = 'https://stark-cove-59535.herokuapp.com/tools';
         fetch(url, {
             method: 'POST',
             headers: {

@@ -12,7 +12,7 @@ const CheckoutForm = ({ order }) => {
     const { _id, price, userEmail, userName } = order;
 
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://stark-cove-59535.herokuapp.com/create-payment-intent', {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -82,7 +82,7 @@ const CheckoutForm = ({ order }) => {
 
             }
 
-            fetch(`http://localhost:5000/purchase/${_id}`, {
+            fetch(`https://stark-cove-59535.herokuapp.com/purchase/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     "content-type": "application/json",
