@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import useToolDetail from '../../Hooks/useToolDetail';
@@ -12,6 +12,7 @@ const Purchase = () => {
     const [tool] = useToolDetail(id);
     const { name, _id, img, price, minOrderQuantity, availableQuantity } = tool;
     const { register, setValue } = useForm();
+    const navigate = useNavigate();
 
     const quantity = useRef('');
 
@@ -65,6 +66,7 @@ const Purchase = () => {
                 console.log(data);
             })
 
+            navigate('/dashboard/orders');
         
     }
 
