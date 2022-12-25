@@ -8,7 +8,7 @@ const ManageTool = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = `https://stark-cove-59535.herokuapp.com/tools/${id}`;
+            const url = `https://laptop-parts-village-server-site-production.up.railway.app/tools/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

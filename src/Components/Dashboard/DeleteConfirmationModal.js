@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 const DeleteConfirmationModal = ({ deletingUser, refetch, setDeletingUser }) => {
 
     const removeUser = (email) => {
-        fetch(`https://stark-cove-59535.herokuapp.com/user/${email}`, {
+        fetch(`https://laptop-parts-village-server-site-production.up.railway.app/user/${email}`, {
             method: 'DELETE',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`

@@ -8,7 +8,7 @@ const useToken = (user) => {
         const currentUser = { email: email };
 
         if (email) {
-            fetch(`https://stark-cove-59535.herokuapp.com/user/${email}`, {
+            fetch(`https://laptop-parts-village-server-site-production.up.railway.app/user/${email}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

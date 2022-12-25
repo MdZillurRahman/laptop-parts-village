@@ -41,7 +41,7 @@ const Purchase = () => {
         }
 
 
-        fetch('https://stark-cove-59535.herokuapp.com/purchase', {
+        fetch('https://laptop-parts-village-server-site-production.up.railway.app/purchase', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -54,7 +54,7 @@ const Purchase = () => {
                 toast("Succesfully Purchased");
             })
  
-        fetch(`https://stark-cove-59535.herokuapp.com/tools/${_id}`, {
+        fetch(`https://laptop-parts-village-server-site-production.up.railway.app/tools/${_id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

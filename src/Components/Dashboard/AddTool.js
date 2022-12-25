@@ -24,7 +24,7 @@ const AddTool = () => {
 
         // console.log(data);
 
-        const url = 'https://stark-cove-59535.herokuapp.com/tools';
+        const url = 'https://laptop-parts-village-server-site-production.up.railway.app/tools';
         fetch(url, {
             method: 'POST',
             headers: {

@@ -10,7 +10,7 @@ const Profile = () => {
     const [user] = useAuthState(auth);
 
     const onSubmit = data => {
-        const url = `https://stark-cove-59535.herokuapp.com/userInfo/${user.email}`;
+        const url = `https://laptop-parts-village-server-site-production.up.railway.app/userInfo/${user.email}`;
         fetch(url, {
             method: 'PUT',
             headers: {

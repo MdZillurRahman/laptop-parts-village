@@ -11,7 +11,7 @@ const Payment = () => {
 
     const stripePromise = loadStripe('pk_test_51L4OkGGwYjminko06FwRKbCpX1ckvDiRNN5qBwBYFDBQrCMOcR3l09Up8iZBwlFvbCylfT6jgruZpVamyZXcyb3j00Bb7Dpddd');
 
-    const url = `https://stark-cove-59535.herokuapp.com/purchase/${id}`;
+    const url = `https://laptop-parts-village-server-site-production.up.railway.app/purchase/${id}`;
 
     const { data: order, isLoading } = useQuery(['booking', id], () => fetch(url, {
         method: 'GET',

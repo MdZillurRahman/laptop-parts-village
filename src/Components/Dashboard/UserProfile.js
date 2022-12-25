@@ -7,7 +7,7 @@ const UserProfile = () => {
     const [userInfo, setUserInfo] = useState([]);
 
     useEffect(() => {
-        fetch(`https://stark-cove-59535.herokuapp.com/userInfo/${user.email}`)
+        fetch(`https://laptop-parts-village-server-site-production.up.railway.app/userInfo/${user.email}`)
             .then(res => res.json())
             .then(data => { 
                 setUserInfo(data);

@@ -7,7 +7,7 @@ const Review = () => {
 
     const onSubmit = data => {
 
-        const url = 'https://stark-cove-59535.herokuapp.com/reviews';
+        const url = 'https://laptop-parts-village-server-site-production.up.railway.app/reviews';
         fetch(url, {
             method: 'POST',
             headers: {

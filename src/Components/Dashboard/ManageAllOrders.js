@@ -5,7 +5,7 @@ const ManageAllOrders = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-            fetch(`https://stark-cove-59535.herokuapp.com/purchase`, {
+            fetch(`https://laptop-parts-village-server-site-production.up.railway.app/purchase`, {
                 method: 'GET',
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('accessToken')}`

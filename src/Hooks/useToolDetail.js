@@ -4,7 +4,7 @@ const useToolDetail = toolId =>{
     const [tool, setTool] = useState({});
 
     useEffect( () =>{
-        const url = `https://stark-cove-59535.herokuapp.com/tools/${toolId}`;
+        const url = `https://laptop-parts-village-server-site-production.up.railway.app/tools/${toolId}`;
         fetch(url)
         .then(res=> res.json())
         .then(data => setTool(data));

@@ -5,7 +5,7 @@ const BusinessSummaries = () => {
     const [summaries, setSummaries] = useState([]);
 
     useEffect(()=>{
-        fetch('https://stark-cove-59535.herokuapp.com/summary')
+        fetch('https://laptop-parts-village-server-site-production.up.railway.app/summary')
         .then(res => res.json())
         .then(data => setSummaries(data))
     },[])

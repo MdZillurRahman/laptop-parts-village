@@ -12,7 +12,7 @@ const CheckoutForm = ({ order }) => {
     const { _id, price, userEmail, userName } = order;
 
     useEffect(() => {
-        fetch('https://stark-cove-59535.herokuapp.com/create-payment-intent', {
+        fetch('https://laptop-parts-village-server-site-production.up.railway.app/create-payment-intent', {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -22,7 +22,7 @@ const CheckoutForm = ({ order }) => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                console.log(data);  
                 if (data?.clientSecret) {
                     setClientSecret(data.clientSecret);
                 }
@@ -43,7 +43,7 @@ const CheckoutForm = ({ order }) => {
             return;
         }
 
-        const { error, paymentMethod } = await stripe.createPaymentMethod({
+        const { error } = await stripe.createPaymentMethod({
             type: 'card',
             card,
         });
@@ -82,7 +82,7 @@ const CheckoutForm = ({ order }) => {
 
             }
 
-            fetch(`https://stark-cove-59535.herokuapp.com/purchase/${_id}`, {
+            fetch(`https://laptop-parts-village-server-site-production.up.railway.app/purchase/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     "content-type": "application/json",
