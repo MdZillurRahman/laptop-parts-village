@@ -25,7 +25,7 @@ const Navbar = () => {
         <li className='text-xl font-medium'><Link to='/blogs'>Blogs</Link></li>
         <li className='text-xl font-medium'><Link to='/portfolio'>Portfolio</Link></li>
         {
-            user && <li><Link to='/dashboard'>Dashboard</Link></li>
+            user && <li className='text-xl font-medium'><Link to='/dashboard'>Dashboard</Link></li>
         }
         <li className='text-xl font-medium'>{user ?
             <div className="dropdown dropdown-end">

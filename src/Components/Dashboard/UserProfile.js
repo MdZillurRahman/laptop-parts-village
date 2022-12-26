@@ -6,6 +6,7 @@ const UserProfile = () => {
     const [user] = useAuthState(auth);
     const [userInfo, setUserInfo] = useState([]);
 
+
     useEffect(() => {
         fetch(`https://laptop-parts-village-server-site-production.up.railway.app/userInfo/${user.email}`)
             .then(res => res.json())
@@ -24,7 +25,7 @@ const UserProfile = () => {
                     <h2 className="card-title">Date of Birth : {userInfo.birthDate}</h2>
                     <h2 className="card-title">Address : {userInfo.address}</h2>
                     <h2 className="card-title">Phone Number : {userInfo.phone}</h2>
-                    <h2 className="card-title">LinkdIn : <a href="https://www.linkedin.com/in/md-zillur-rahman-2042291ab">{userInfo.profileLink}</a></h2>
+                    <h2 className="card-title">LinkedIn : <a href="https://www.linkedin.com/in/md-zillur-rahman-2042291ab">{userInfo.profileLink}</a></h2>
 
                 </div>
             </div>

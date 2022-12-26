@@ -16,7 +16,7 @@ const Login = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
-    let from = location.state?.from?.pathname || '/';
+    let from = location.state?.from || '/';
 
     const onSubmit = async (data) => {
         await signInWithEmailAndPassword(data.email, data.password);

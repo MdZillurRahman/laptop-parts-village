@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { useCreateUserWithEmailAndPassword, useSendEmailVerification, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import useToken from '../../Hooks/useToken';
 
@@ -14,6 +14,8 @@ const Register = () => {
     const [token] = useToken(user);
     const { register, formState: { errors }, handleSubmit } = useForm();
     const navigate = useNavigate();
+    const location = useLocation();
+    let from = '/home';
 
     const onSubmit = async data => {
         await createUserWithEmailAndPassword(data.email, data.password);
@@ -22,7 +24,8 @@ const Register = () => {
     };
 
     if (token) {
-        navigate('/home');
+        // navigate('/home');
+        navigate(from, { replace: true });
     }
 
     if (loading || updating) {

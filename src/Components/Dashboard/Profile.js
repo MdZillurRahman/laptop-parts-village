@@ -8,6 +8,7 @@ import UserProfile from './UserProfile';
 const Profile = () => {
     const { register, handleSubmit} = useForm();
     const [user] = useAuthState(auth);
+    const [reload, setReload] = useState(false);
 
     const onSubmit = data => {
         const url = `https://laptop-parts-village-server-site-production.up.railway.app/userInfo/${user.email}`;
@@ -22,6 +23,7 @@ const Profile = () => {
             .then(result => {
                 if (result.upsertedCount === 1) {
                     toast("Updated!!");
+                    setReload(!reload);
                 }
                 else {
                     toast.error("Already Updated!!")

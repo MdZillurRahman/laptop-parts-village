@@ -34,7 +34,7 @@ const Orders = () => {
     }, [user, navigate])
     return (
         <div>
-            <h3>My Orders: {orders.length}</h3>
+            <h1 className='font-bold text-center py-3'>My Orders: {orders.length}</h1>
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     <thead>
