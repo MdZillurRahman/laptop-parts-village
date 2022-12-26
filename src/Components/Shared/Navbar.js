@@ -21,13 +21,13 @@ const Navbar = () => {
 
 
     const navbar = <>
-        <li className='text-2xl'><Link to='/home'>Home</Link></li>
-        <li><Link to='/blogs'>Blogs</Link></li>
-        <li><Link to='/portfolio'>Portfolio</Link></li>
+        <li className='text-xl font-medium'><Link to='/home'>Home</Link></li>
+        <li className='text-xl font-medium'><Link to='/blogs'>Blogs</Link></li>
+        <li className='text-xl font-medium'><Link to='/portfolio'>Portfolio</Link></li>
         {
             user && <li><Link to='/dashboard'>Dashboard</Link></li>
         }
-        <li>{user ?
+        <li className='text-xl font-medium'>{user ?
             <div className="dropdown dropdown-end">
                 <label tabIndex="3" className="btn"><img className='w-8' src={icon} alt="" /></label>
                 <ul tabIndex="4" className="dropdown-content shadow bg-base-100 rounded-box w-36 mt-36">
@@ -52,7 +52,7 @@ const Navbar = () => {
                     <Link to='/home'><img className='w-12 ml-16 hidden lg:block' src={logo} alt="" /></Link>
                     <Link to='/home' className="btn btn-ghost normal-case text-xl">Laptop Parts Village</Link>
                 </div>
-                <div className="navbar-center hidden lg:flex">
+                <div className="navbar-center hidden lg:flex ">
                     <ul className="menu menu-horizontal p-0">
                         {navbar}
                     </ul>
