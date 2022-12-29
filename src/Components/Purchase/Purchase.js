@@ -18,17 +18,14 @@ const Purchase = () => {
 
   const handleQuantity = () => {
     const newQuantity = quantity.current.value;
-console.log(newQuantity);
-    if (newQuantity < (minOrderQuantity-1) || newQuantity > availableQuantity) {
+    if (newQuantity < minOrderQuantity - 1 || newQuantity > availableQuantity) {
       toast(
         `Minimum Order quantity is ${minOrderQuantity}. Please select a value between ${minOrderQuantity} and ${availableQuantity}`
       );
       document.querySelector(".orderButton").disabled = true;
+    } else {
+      document.querySelector(".orderButton").disabled = false;
     }
-    else{
-        document.querySelector(".orderButton").disabled = false;
-    }
-
   };
 
   const handlePurchase = (event) => {
@@ -59,8 +56,7 @@ console.log(newQuantity);
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
-        toast("Succesfully Purchased");
+        toast.success("Successfully Purchased");
       });
 
     fetch(
@@ -165,11 +161,9 @@ console.log(newQuantity);
               <button
                 type="submit"
                 className="btn btn-primary orderButton text-white"
-
               >
                 Purchase
               </button>
-
             </div>
           </div>
         </form>

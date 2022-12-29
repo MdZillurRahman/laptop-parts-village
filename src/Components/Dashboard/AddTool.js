@@ -35,7 +35,7 @@ const AddTool = () => {
             .then(res => res.json())
             .then(result => {
                 console.log(result);
-                toast('Tool Added')
+                toast.success('Tool Added')
             })
     };
 

@@ -8,8 +8,8 @@ const Bannar = () => {
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-md">
                         <h1 className="mb-5 text-5xl font-bold text-primary">Get Your Laptop Parts Here</h1>
-                        <p className="mt-8 text-xl text-yellow-400 lg:text-black">We are supplying laptop parts all over the world. You can buy any types of parts in retail price here.</p>
-                        <button className="btn btn-primary mt-12">Show Me</button>
+                        <p className="mt-8 text-xl text-yellow-400 lg:text-white">We are supplying laptop parts all over the world. You can buy any types of parts in retail price here.</p>
+                        <a href='#ourTools'><button className="btn btn-primary mt-12 text-white">Show Me</button></a>
                     </div>
                 </div>
             </div>

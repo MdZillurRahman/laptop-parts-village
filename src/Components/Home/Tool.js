@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { format } from 'date-fns';
 
-const Tool = ({ tool, date }) => {
+const Tool = ({ tool, date, admin }) => {
     const { _id, name, img, description, minOrderQuantity, availableQuantity, price } = tool;
     
     const formattedDate = format(date, 'PP');
@@ -11,6 +11,7 @@ const Tool = ({ tool, date }) => {
     const handleOrder = (id) =>{
         navigate(`/tools/${id}`);
     }
+
 
     return (
         <div className="hero bg-gray-300 rounded-lg">
@@ -26,7 +27,7 @@ const Tool = ({ tool, date }) => {
                     <p><b>Available Quantity:</b> {availableQuantity}</p>
                     <p><b>Order Date:</b> {formattedDate}</p>
                     
-                    <button onClick={() => handleOrder(_id)} className="btn btn-primary mt-3 text-white">Order Now</button>
+                    {!admin && <button onClick={() => handleOrder(_id)} className="btn btn-primary mt-3 text-white orderNowButton" >Order Now</button>}
                 </div>
             </div>  
         </div>

@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { format } from 'date-fns';
 import Tool from './Tool';
 
-const Tools = ({date}) => {
+const Tools = ({date,admin}) => {
     const [tools, setTools] = useState([]);
-    const formattedDate = format(date, 'PP');
+    // const formattedDate = format(date, 'PP');
 
     useEffect(()=>{
         fetch(`https://laptop-parts-village-server-site-production.up.railway.app/tools`)
@@ -13,7 +13,7 @@ const Tools = ({date}) => {
     },[])
 
     return (
-        <div >
+        <div id='ourTools'>
             <div className='text-center mt-16'>
                 <h3 className='text-primary text-2xl font-bold uppercase'>Our Tools</h3>
                 <h2 className='text-3xl'>Tools We Provide</h2>
@@ -23,7 +23,8 @@ const Tools = ({date}) => {
                     tools.map(tool => <Tool
                         key={tool._id}
                         tool={tool}
-                        date={date}>
+                        date={date}
+                        admin={admin}>
                     </Tool>)
                 }
             </div>
